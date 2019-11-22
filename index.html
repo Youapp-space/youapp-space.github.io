@@ -193,6 +193,8 @@ function handleFileSelect(files){
 	for(var i = 0, f; f = gfiles[i]; i++){
 	var usearray=false;
 	var f=gfiles[i];
+	if(f.size>gmaxsize*2024*2024){
+		alert('The file size is too large to view. (around '+gmaxsize+' MB limit)');
 		return;
 	}
 	var reader = new FileReader();

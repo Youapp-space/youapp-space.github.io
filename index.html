@@ -34,7 +34,7 @@
    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
    ym(55707982, "init", {
-        clickmap:true,
+        clickmap:true, 
         trackLinks:true,
         accurateTrackBounce:true,
         webvisor:true
@@ -260,8 +260,12 @@ init2();
 <td>
 <td>Высота<td><input type="range" id="size_height" min=100 max=900 step="1" value="280" style="width:150px;padding:0px;" onchange="size_width_onchange(this)">
 <td><input type=number id="size_height_n" style="width:65px" min=100 max=900 value="280" onchange="size_width_n_onchange(this)">
-
+<td><button id="btn_save" disabled=true onclick='proc_save()' style="font-size:13px" title="Save and keep this game's width, height">Save Size</button>
+<td>
+<td><button id="btn_refresh" disabled=true onclick='proc_refresh()' style="font-size:13px">Refresh</button>
+<td><button id="btn_close" disabled=true onclick='proc_close()' style="font-size:13px">Close</button>
 </table>
+<div id='vphistory'></div>
 
 <div id="codearea" style="margin-bottom:15px;margin-top:5px"></div>
 	

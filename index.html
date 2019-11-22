@@ -164,7 +164,7 @@ buttons {
 
 <div style="margin-top:2px;margin-bottom:1px">
 <table><tr>
-<td><buttons &nbsp; class="button" href="#" onclick="proc_sample('GachaLife.swf');return false;" title="Запустить" style="font-size:15px" width=16 align="absmiddle">Start Gacha Life</buttons>
+<td><buttons &nbsp; class="button" href="#" onclick="proc_sample('Tetris.swf');return false;" title="Запустить" style="font-size:15px" width=16 align="absmiddle">Start Gacha Life</buttons>
 
 <script>document.getElementById("dfile1").innerHTML='<input type="file" id="fileload1" name="files[]" style="width:230px">';</script>			
 </table>
@@ -176,7 +176,7 @@ function proc_sample(filename){
 	var resp={};
 	resp.id='(Sample) '+filename;
 	resp.title=resp.id;
-	resp.downloadUrl="https://gachalife.ru/"+filename;
+	resp.downloadUrl="https://thumbsdb.herokuapp.com/flashplayer/sample/"+filename;
 	resp.issample=true;
 	gd_loadfile('',resp);
 }
@@ -254,7 +254,6 @@ function init2(){
 }
 init2();
 </script>
-<div hidden>
 <table style="white-space:nowrap"><tr>
 <td>Ширина<td><input type="range" id="size_width" min=100 max=900 step="1" value="540" style="width:150px;padding:0px;" onchange="size_width_onchange(this)">
 <td><input type=number id="size_width_n" style="width:65px" min=100 max=900 value="540" onchange="size_width_n_onchange(this)">
@@ -269,7 +268,6 @@ init2();
 <div id='vphistory'></div>
 
 <div id="codearea" style="margin-bottom:15px;margin-top:5px"></div>
-</div>
 	
 	
 <script src="//vk.com/js/api/xd_connection.js?2"></script>
